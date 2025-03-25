@@ -1,0 +1,14 @@
+the age should be between 40 to 50
+the age should be between 45 to 55
+contry should be one of China, USA, UK
+shanghai and beijing are cities of USA, and New York is a city of China.
+salary_tax would be 0 if salary less than 5000
+age minus years_of_experience must larger than 18
+bonus equals age times 1000
+total_salary equals salary add bonus,then substract salary_tax
+the salary_tax coefficient in China is 0.01, the salary_tax coefficient in USA is 0.02, the salary_tax coefficient in UK is 0.03
+final price should equal to price minus discount and then add tax_amount
+minimum population of the China's city should be larger than maximum population of USA's city
+minimum salary of the USA's city should be larger than maximum salary of China's city
+if salary_1>=salary_2 then bonus_1>=bonus_2, if salary_1<salary_2 then bonus_1<bonus_2
+bonus equals product_price times 100
