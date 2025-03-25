@@ -25,10 +25,10 @@ def parse_json_response(response_text):
         return None
 
 # API 密钥（从环境变量中获取）
-api_key = 'sk-7aecbf7b649344f6adb765f1b6cbc7a0'
+api_key = ''
 
 # API 端点
-url = "https://api.deepseek.com/v1/chat/completions"
+url = ""
 
 def generate_dataset_columns(description):
     """
