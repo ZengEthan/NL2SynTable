@@ -5,18 +5,18 @@ import subprocess
 import re
 
 # API 密钥（从环境变量中获取）
-api_key = 'sk-7aecbf7b649344f6adb765f1b6cbc7a0'
+api_key = ''
 # API 端点
-url = "https://api.deepseek.com/v1/chat/completions"
-api_key = 'sk-mmriSwFf0wbNPS2M4bA011Dd7eB74eC9A78d0bD81603CbF0'
+url = ""
+api_key = ''
 # API 端点
-url = "https://api.bemore.lol/v1/chat/completions"
-api_key = 'sk-7aecbf7b649344f6adb765f1b6cbc7a0'
+url = ""
+api_key = ''
 # # API 端点
-url = "https://api.deepseek.com/v1/chat/completions"
+url = ""
 
-# url = "https://api.siliconflow.cn/v1/chat/completions"
-# api_key = 'sk-cghwmrcqduhtuzbnizymnbxocvgxwwaitejdxkxcjvpfqhvi'
+# url = ""
+# api_key = ''
 
 def extract_python_code(response_text):
     """
@@ -171,12 +171,12 @@ python_script = generate_python_script(json_data, content)
 
 if python_script:
     # 保存 Python 脚本到文件
-    with open("generate_dataset1.py", "w") as f:
+    with open("generate_dataset.py", "w") as f:
         f.write(python_script)
 
     # 运行 Python 脚本
     try:
-        subprocess.run(["python", "generate_dataset1.py"], check=True)
+        subprocess.run(["python", "generate_dataset.py"], check=True)
         print("Dataset generated successfully.")
     except subprocess.CalledProcessError as e:
         print(f"Error running script: {e}")
