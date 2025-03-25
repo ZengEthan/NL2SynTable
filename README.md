@@ -1,37 +1,46 @@
-# Project Overview
+# Controllable Table Data Synthesis with Natural Language and Knowledge Base
 
-This project contains three Python scripts designed for generating JSON data, generating Python code using a GPT model, and creating datasets. These scripts are useful for data processing, machine learning, and automated code generation.
+This project provides a pipeline for generating structured table datasets using natural language descriptions and an optional knowledge base for controlled constraints. The workflow consists of three sequential steps:
+
+1. **`generate_json.py`** - Accepts a natural language description of the desired table dataset and generates a JSON file representing column relationships.
+2. **`generate_python.py`** - Takes the JSON file as input, optionally incorporating a knowledge base to enforce controlled constraints on the synthesized data.
+3. **`generate_dataset.py`** - Uses the processed JSON and constraints to generate the final dataset.
+
+## Workflow
+
+1. **Define the dataset**: Run `generate_json.py` with a textual description of the table data you want to synthesize.
+2. **Process constraints**: Use `generate_python.py` to process the JSON output, optionally integrating domain-specific knowledge for enhanced control.
+3. **Generate the dataset**: Execute `generate_dataset.py` to synthesize the structured data.
 
 ## File Descriptions
 
-### 1. `generate_json.py`
-
+### `generate_json.py`
 **Functionality:**
-This script converts data into JSON format, making it suitable for scenarios requiring structured JSON data generation.
+- Accepts a text description of the target dataset.
+- Produces a JSON file defining column relationships.
 
 **Usage:**
 ```bash
-python generate_json.py [arguments]
+python generate_json.py --description "Your dataset description here"
 ```
 
-### 2. `generate_python_gpt.py`
-
+### `generate_python.py`
 **Functionality:**
-This script generates Python code by leveraging a GPT model, useful for automated script generation and code assistance.
+- Processes the JSON file generated in the first step.
+- Optionally integrates a knowledge base to impose constraints on the synthesized data.
 
 **Usage:**
 ```bash
-python generate_python_gpt.py [arguments]
+python generate_python.py --json_file generated_structure.json [--knowledge_base knowledge_base.json]
 ```
 
-### 3. `generate_dataset.py`
-
+### `generate_dataset.py`
 **Functionality:**
-This script is used for generating and processing datasets, particularly for training and evaluating machine learning models.
+- Generates the final table dataset based on the structured JSON and optional constraints.
 
 **Usage:**
 ```bash
-python generate_dataset.py [arguments]
+python generate_dataset.py --json_file processed_structure.json
 ```
 
 ## Dependencies
@@ -52,14 +61,15 @@ Project Root
 │
 └───scripts
     │   generate_json.py
-    │   generate_python_gpt.py
+    │   generate_python.py
     │   generate_dataset.py
 ```
 
 ## Notes
 
-- Ensure that the necessary API access (e.g., GPT API) is configured properly for smooth execution.
-- Refer to the comments within each script for detailed parameter configurations.
+- Ensure that all scripts are executed in the correct sequence for proper dataset synthesis.
+- The knowledge base is optional but improves data generation control.
+- Refer to inline comments within each script for additional details on parameters and configurations.
 
 ## Contributors
 
