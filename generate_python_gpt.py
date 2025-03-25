@@ -6,8 +6,8 @@ from openai import OpenAI
 
 # 初始化 OpenAI 客户端
 client = OpenAI(
-    api_key="sk-ItbAsc92Oyhl3ipnzV0W1XLr1PI6T9uPmNYq3Eew6Ai6Fh3p",
-    base_url="https://api.chatanywhere.tech/v1"
+    api_key="",
+    base_url=""
 )
 
 
@@ -122,12 +122,12 @@ python_script = generate_python_script(json_data, content)
 
 if python_script:
     # 保存 Python 脚本到文件
-    with open("generate_dataset1.py", "w") as f:
+    with open("generate_dataset.py", "w") as f:
         f.write(python_script)
 
     # 运行 Python 脚本
     try:
-        subprocess.run(["python", "generate_dataset1.py"], check=True)
+        subprocess.run(["python", "generate_dataset.py"], check=True)
         print("Dataset generated successfully.")
     except subprocess.CalledProcessError as e:
         print(f"Error running script: {e}")
