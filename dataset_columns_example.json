@@ -1,0 +1,31 @@
+{
+    "DepartmentID": [
+        "bonus",
+        "total_salary",
+        "salary_tax",
+		"salary",
+		"role",
+		"EmployeeID",
+		"paymentType"
+    ],
+    "age": [
+        "years_of_experience",
+        "retirement_age",
+        "bonus"
+    ],
+    "product_price": [
+        "discount",
+        "final_price",
+        "tax_amount"
+    ],
+    "country": [
+        "city",
+        "region",
+        "population"
+    ],
+    "education_level": [
+        "degree_type",
+        "institution",
+        "graduation_year"
+    ]
+}

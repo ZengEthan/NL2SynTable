@@ -12,3 +12,10 @@ minimum population of the China's city should be larger than maximum population 
 minimum salary of the USA's city should be larger than maximum salary of China's city
 if salary_1>=salary_2 then bonus_1>=bonus_2, if salary_1<salary_2 then bonus_1<bonus_2
 bonus equals product_price times 100
+DepartmentID may have five values, which are departmenA, departmenB, departmenC, departmenD, departmenE, 
+for the role column, there are five kinds of rank, which is intern,engineer,manager，director and vp, and every one has a DepartmentID.
+group by DepartmentID, people with the same rank should have same salary, and people with different rank should have different salary
+group by DepartmentID, the one with manager role should have higher salary than the one with intern role
+different employee has different EmployeeID, group by EmployeeID,  for a employee, the sum of rows with paymentType being monthlyPay Salary should be equal to the row with payment type of yearlyPay Salary, monthlyPaySalary equals to salary, and for a employee, you should generate for every year and every month
+monthId is from 1-12, and yearId is from 2002 to 2004
+paymentType has two options,which are monthlyPay and yearlyPay
